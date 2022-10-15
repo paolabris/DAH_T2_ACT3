@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="REACT ROUTER TURORIAL">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="alternate icon" href="./images/favicon.ico" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png" sizes="180x180">
+    <link rel="mask-icon" href="./images/safari-pinned-tab.svg" color="#FFFFFF">
+    <meta name="theme-color" content="#000000">
+   
+    <link rel="manifest" href="/manifest.json" />
+   
+    <title>PWA VITE APP REACT-ROUTER</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+        if('serviceWorker' in navigator){
+          window.addEventListener('load', ()=> {
+            navigator.serviceWorker.register('./serviceWorker.js')
+            .then((reg)=> console.log('Success: ', reg.scope))
+            .catch((err) => console.log('Failure: ', err));
+          })
+        }
+    </script>
+    <script type="module" src="/src/main.jsx">
+    </script>
+   
+  </body>
+</html>
